@@ -367,9 +367,6 @@
   /* Main photo */
 
   /* Cards list */
-  .cards-list-wrapper {
-    width: 40%;
-  }
 
   .card {
     min-width: 200px;
@@ -518,5 +515,8 @@
   .header-card_v {
     margin-bottom: 0.8rem;
     gap: 0;
+  }
+  .cards-list-wrapper {
+    width: 40%;
   }
 }
