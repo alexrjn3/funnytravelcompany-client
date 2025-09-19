@@ -1,5 +1,5 @@
 let cardsList = document.querySelector(".cards-list");
-const spinner = document.getElementById("spinner");
+const spinner = document.querySelector(".spinner");
 
 export const getSomeOferte = async function (type = "Romania") {
   spinner.style.display = "block";
