@@ -44,15 +44,11 @@ function aranjatCard(elem_parinte, card) {
       <div class="card-v-img-sec">
         <!-- Top photo -->
         <p class="more-photos-text">Poze</p>
-        <img src="${process.env.server_url}/posters/${
-      card.images[1]
-    }" alt="photo"/>
+        <img src="${card.images[1]}" alt="photo"/>
 
         <!-- Bottom photo -->
         <div class="bottom-photo-container" style="position: relative;">
-          <img src="${process.env.server_url}/posters/${
-      card.images[2] || card.images[1]
-    }" alt="photo"/>
+          <img src="${card.images[2] || card.images[1]}" alt="photo"/>
 
           ${
             card.images.length > 1
@@ -85,9 +81,7 @@ function aranjatCard(elem_parinte, card) {
     </div>
     <div class="body-card_v">
       <div class="card-v-img-main">
-        <img src="${process.env.server_url}/posters/${
-    card.images[0]
-  }" alt="*no-photo"/>
+        <img src="${card.images[0]}" alt="*no-photo"/>
       </div>
 
       ${imgSection}
@@ -148,10 +142,7 @@ function deschidePoza(e) {
 
     // umplem lightbox-ul
     content.innerHTML = images
-      .map(
-        (img) =>
-          `<img src="${process.env.server_url}/posters/${img}" alt="photo" />`
-      )
+      .map((img) => `<img src="${img}" alt="photo" />`)
       .join("");
 
     lightbox.classList.remove("hidden");

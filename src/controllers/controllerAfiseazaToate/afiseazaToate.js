@@ -71,7 +71,7 @@ export async function afiseazaOferte(data) {
       return `
        <div class="carduri_v" data-id="${card.id}">
           <div class="left-carduri-v">
-            <img src="${process.env.server_url}/posters/${card.images[0]}" alt="*no-photo"/>
+            <img src="${card.images[0]}" alt="*no-photo"/>
           </div>
           <div class="right-carduri-v">
             <div class="top-info">
