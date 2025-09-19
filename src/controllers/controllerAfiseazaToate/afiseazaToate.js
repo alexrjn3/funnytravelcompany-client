@@ -12,7 +12,7 @@ let main_photo = document.querySelector(".main-photo");
 // let currentData = []; // datele afisate
 
 const getOferte = async function (type = "Romania") {
-  const url = `${process.env.server_url}3000/api/v1/oferte/type/${type}`;
+  const url = `${process.env.server_url}/api/v1/oferte/type/${type}`;
 
   try {
     // Use fetch to send the GET request to the server

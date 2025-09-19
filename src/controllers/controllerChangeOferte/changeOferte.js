@@ -14,7 +14,7 @@ export async function changeOferte(choice) {
       return `
  <div class="card" data-id="${card.id}">
     ${card.new_Oferta ? `<span class="new-badge">Nou</span>` : ""}
-    <img src="${process.env.server_url}}/posters/${card.images[0]}" alt="${
+    <img src="${process.env.server_url}/posters/${card.images[0]}" alt="${
         card.title
       }" class="card-img" />
     <span class="card-title">${card.country}</span>
