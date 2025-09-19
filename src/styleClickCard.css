@@ -236,7 +236,7 @@
   width: 65%;
   height: 180px;
   width: 300px;
-  background: url("./resurse/google_maps.jpg");
+  background: url("./../resurse/google_maps.jpg");
   background-size: cover;
   border-radius: 8px;
   overflow: hidden;
