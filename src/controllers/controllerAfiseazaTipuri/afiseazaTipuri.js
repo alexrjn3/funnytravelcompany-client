@@ -12,7 +12,7 @@ let carduri_vizualizare;
 // let currentData = []; // datele afisate
 
 const getTipOferta = async function (tipOferta) {
-  const url = `http://localhost:3000/api/v1/oferte/tipOferta/${tipOferta}`;
+  const url = `${process.env.server_url}/api/v1/oferte/tipOferta/${tipOferta}`;
 
   try {
     // Use fetch to send the GET request to the server

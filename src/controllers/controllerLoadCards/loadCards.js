@@ -1,9 +1,7 @@
-import { API_URL } from "../../../util/config";
-
 let cardsList = document.querySelector(".cards-list");
 
 export const getSomeOferte = async function (type = "Romania") {
-  const url = `http://localhost:3000/api/v1/oferte/load/type/${type}`;
+  const url = `${process.env.server_url}/api/v1/oferte/load/type/${type}`;
 
   try {
     // Use fetch to send the GET request to the server
@@ -31,7 +29,7 @@ function afiseazaOferte(data) {
       return `
  <div class="card" data-id="${card.id}">
     ${card.new_Oferta ? `<span class="new-badge">Nou</span>` : ""}
-    <img src="${API_URL}/posters/${
+    <img src="${process.env.server_url}/posters/${
         card.images[0]
       }" alt="no-img" class="card-img" />
     <span class="card-title">${card.country}</span>

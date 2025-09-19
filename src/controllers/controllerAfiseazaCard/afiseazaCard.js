@@ -4,7 +4,6 @@ let card_list = document.querySelector(".card-list");
 let locatie = document.querySelector(".locatie");
 let main = document.querySelector(".main");
 let main_photo = document.querySelector(".main-photo");
-import { API_URL } from "../../../util/config";
 
 function hideMainElem() {
   select_zona.classList.add("hidden");
@@ -15,7 +14,7 @@ function hideMainElem() {
 }
 
 export const getOferta = async function (id) {
-  const url = `http://localhost:3000/api/v1/oferte/id/${id}`;
+  const url = `${process.env.server_url}/api/v1/oferte/id/${id}`;
 
   try {
     // Use fetch to send the GET request to the server
@@ -45,11 +44,13 @@ function aranjatCard(elem_parinte, card) {
       <div class="card-v-img-sec">
         <!-- Top photo -->
         <p class="more-photos-text">Poze</p>
-        <img src="${API_URL}/posters/${card.images[1]}" alt="photo"/>
+        <img src="${process.env.server_url}/posters/${
+      card.images[1]
+    }" alt="photo"/>
 
         <!-- Bottom photo -->
         <div class="bottom-photo-container" style="position: relative;">
-          <img src="${API_URL}/posters/${
+          <img src="${process.env.server_url}/posters/${
       card.images[2] || card.images[1]
     }" alt="photo"/>
 
@@ -84,7 +85,9 @@ function aranjatCard(elem_parinte, card) {
     </div>
     <div class="body-card_v">
       <div class="card-v-img-main">
-        <img src="${API_URL}/posters/${card.images[0]}" alt="*no-photo"/>
+        <img src="${process.env.server_url}/posters/${
+    card.images[0]
+  }" alt="*no-photo"/>
       </div>
 
       ${imgSection}
@@ -145,7 +148,10 @@ function deschidePoza(e) {
 
     // umplem lightbox-ul
     content.innerHTML = images
-      .map((img) => `<img src="${API_URL}/posters/${img}" alt="photo" />`)
+      .map(
+        (img) =>
+          `<img src="${process.env.server_url}/posters/${img}" alt="photo" />`
+      )
       .join("");
 
     lightbox.classList.remove("hidden");

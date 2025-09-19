@@ -1,4 +1,3 @@
-import { API_URL } from "../../../util/config";
 import { afiseazaCard } from "../controllerAfiseazaCard/afiseazaCard.js";
 
 let select_zona = document.querySelector(".select-zona");
@@ -13,7 +12,7 @@ let main_photo = document.querySelector(".main-photo");
 // let currentData = []; // datele afisate
 
 const getOferte = async function (type = "Romania") {
-  const url = `http://localhost:3000/api/v1/oferte/type/${type}`;
+  const url = `${process.env.server_url}3000/api/v1/oferte/type/${type}`;
 
   try {
     // Use fetch to send the GET request to the server
@@ -72,7 +71,7 @@ export async function afiseazaOferte(data) {
       return `
        <div class="carduri_v" data-id="${card.id}">
           <div class="left-carduri-v">
-            <img src="${API_URL}/posters/${card.images[0]}" alt="*no-photo"/>
+            <img src="${process.env.server_url}/posters/${card.images[0]}" alt="*no-photo"/>
           </div>
           <div class="right-carduri-v">
             <div class="top-info">

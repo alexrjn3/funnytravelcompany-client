@@ -83,7 +83,7 @@ export async function showAdminLogin() {
     const email = input_email.value.trim();
     const password = input_pass.value;
 
-    const res = await fetch("http://localhost:3000/api/v1/users/login", {
+    const res = await fetch(`${process.env.server_url}/api/v1/users/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -91,7 +91,7 @@ export async function showAdminLogin() {
     });
 
     if (res.ok) {
-      window.location.href = "http://localhost:3000/admin/dashboard";
+      window.location.href = `${process.env.server_url}/admin/dashboard`;
     } else {
       alert("Login failed");
     }

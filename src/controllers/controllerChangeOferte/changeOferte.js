@@ -1,6 +1,6 @@
 let cardsList = document.querySelector(".cards-list");
 let cardTitle = document.querySelector(".card-list-title");
-import { API_URL } from "../../../util/config";
+
 import { getSomeOferte } from "../controllerLoadCards/loadCards";
 
 export async function changeOferte(choice) {
@@ -14,7 +14,7 @@ export async function changeOferte(choice) {
       return `
  <div class="card" data-id="${card.id}">
     ${card.new_Oferta ? `<span class="new-badge">Nou</span>` : ""}
-    <img src="${API_URL}/posters/${card.images[0]}" alt="${
+    <img src="${process.env.server_url}}/posters/${card.images[0]}" alt="${
         card.title
       }" class="card-img" />
     <span class="card-title">${card.country}</span>
