@@ -1,6 +1,8 @@
 let cardsList = document.querySelector(".cards-list");
+const spinner = document.getElementById("spinner");
 
 export const getSomeOferte = async function (type = "Romania") {
+  spinner.style.display = "block";
   const url = `${process.env.server_url}/api/v1/oferte/load/type/${type}`;
 
   try {
@@ -19,6 +21,8 @@ export const getSomeOferte = async function (type = "Romania") {
     }
   } catch (error) {
     console.error("Error:", error);
+  } finally {
+    spinner.style.display = "none";
   }
 };
 
