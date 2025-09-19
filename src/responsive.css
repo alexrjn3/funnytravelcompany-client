@@ -305,6 +305,9 @@
   .bottom-info {
     align-self: center;
   }
+  .cards-list-wrapper {
+    width: 32%;
+  }
 }
 
 @media (max-width: 857px) {
@@ -472,6 +475,9 @@
     width: 180px;
     max-width: 200px;
     min-width: 150px;
+  }
+  .card-content {
+    height: 63%;
   }
 }
 
