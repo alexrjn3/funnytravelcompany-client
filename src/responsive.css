@@ -1,0 +1,516 @@
+/* Ascuns implicit */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #222;
+  color: #fff;
+  padding-top: 4rem;
+  z-index: 1001;
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+}
+
+.mobile-menu.show {
+  display: block;
+  transform: translateX(0);
+  width: 100%;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.mobile-menu li {
+  padding: 1.6rem 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mobile-menu li:hover {
+  background-color: grey;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  position: absolute;
+  top: 2.8rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  background: none;
+  cursor: pointer;
+  z-index: 1002;
+  color: #fabb0e;
+  font-weight: 600;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  border: none;
+}
+
+.hamburger-on {
+  color: white;
+}
+
+@media (max-width: 1590px) {
+  /*PAGINA VEZI-TOATE */
+  .carduri_v {
+    gap: 8rem;
+  }
+
+  .right-carduri-v {
+    height: 40%;
+  }
+
+  .bottom-info {
+    margin-top: 1rem;
+  }
+
+  .left-carduri-v img {
+    width: 500px;
+    height: 200px;
+  }
+
+  /*MAIN */
+  .body-card_v {
+    grid-template-columns: 1fr 1fr 0.3fr; /* 3 coloane */
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "main detalii ."
+      "main detalii ."
+      "img  img     ."
+      ".    .       .";
+    column-gap: 4rem;
+  }
+  .body-card_v.mai-multe-img {
+    grid-template-columns: 1fr 1fr 0.3fr; /* 3 coloane */
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "main detalii ."
+      "main detalii ."
+      "img  img     ."
+      ".    .       .";
+    column-gap: 4rem;
+  }
+
+  .card-v-img-sec {
+    flex-direction: row;
+    justify-content: flex-start;
+    height: auto;
+    gap: 2rem;
+  }
+
+  .card-v-img-sec img {
+    width: 294px;
+  }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 1355px) {
+  .header {
+    align-items: flex-start;
+  }
+  .app-logo {
+    margin: 0;
+    border-bottom-left-radius: 0;
+  }
+  .nav-bar {
+    align-self: center;
+  }
+  .top-tel img {
+    height: 40px;
+    width: 40px;
+  }
+  .zona-tel {
+    justify-content: center;
+  }
+  .numar-tel {
+    font-size: 1.5rem;
+  }
+  .bottom-tel {
+    font-size: 1rem;
+  }
+  .grid-item {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .grid-item-poza4 {
+    display: none;
+  }
+  .button-googleMaps {
+    width: 60%;
+    height: 20%;
+    font-size: 0.8rem;
+  }
+  .locatie-title {
+    padding-left: 4rem;
+    width: 80%;
+  }
+  /* Select zona */
+  .select-zona {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 8rem;
+    align-items: center;
+  }
+
+  .select-zona-ro,
+  .select-zona-str {
+    max-width: 450px;
+    min-width: 450px;
+    height: 120px;
+  }
+
+  .select-zona-ro-text,
+  .select-zona-str-text {
+    font-size: 1.5rem;
+    bottom: 5%;
+    right: 5%;
+  }
+
+  .select-steag img {
+    width: 60px;
+    height: 30px;
+    top: 10%;
+    right: 65%;
+  }
+}
+
+@media (max-width: 1312px) {
+  .nav-list {
+    font-size: 1.4rem;
+  }
+  .nav-list li {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1227px) {
+  .pret-carduri {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-carduri-v img {
+    width: 500px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .body-card_v {
+    grid-template-columns: 1fr; /* 3 coloane */
+    grid-template-areas:
+      "main"
+      "main"
+      "detalii";
+    justify-items: center; /* center grid items horizontally */
+    text-align: center;
+
+    width: 60%;
+  }
+  .body-card_v.mai-multe-img {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "main"
+      "main"
+      "detalii"
+      "img";
+  }
+  .card-v-img-sec > img:first-of-type {
+    display: none;
+  }
+  .first-col-detalii {
+    gap: 4rem;
+    width: 93%;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .container-gps {
+    align-self: flex-start;
+  }
+  .locatie-title-gps-card {
+    text-align: start;
+  }
+  .more-photos-text {
+    display: block;
+  }
+  .card-v-img-main {
+    width: 100%;
+  }
+  .card-v-img-sec {
+    flex-direction: column;
+    gap: 0;
+    display: flex;
+    width: 93%;
+    margin-top: 2rem;
+  }
+  .header-card_v {
+    width: 57%;
+  }
+  .footer-card_v {
+    width: 57%;
+  }
+  .details {
+    font-size: 1.2rem;
+  }
+  .text-details {
+    padding-top: 1rem;
+    width: 100%;
+  }
+  .card-vizualizare {
+    align-items: center;
+    width: 95%;
+  }
+  .text-details_footer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 955px) {
+  .carduri_v {
+    flex-direction: column; /* pune totul pe vertical */
+    gap: 0;
+  }
+  .carduri-vizualizare {
+    gap: 10rem;
+    margin-top: 8rem;
+  }
+
+  /* schimbăm ordinea elementelor */
+  .top-info {
+    order: -1; /* apare înaintea imaginii */
+  }
+
+  .left-carduri-v {
+    order: 0; /* imaginea va fi între top-info și bottom-info */
+  }
+
+  .bottom-info {
+    order: 1; /* apare la final */
+    margin-top: 1rem;
+  }
+
+  .left-carduri-v img {
+    width: 100%; /* imaginea ocupă tot ecranul */
+  }
+  .right-carduri-v {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .bottom-info {
+    align-self: center;
+  }
+}
+
+@media (max-width: 857px) {
+  /* Header */
+  .header {
+    flex-direction: column;
+    height: auto;
+
+    margin: 0 auto;
+  }
+  .main-photo-cardPage {
+    height: 22vh;
+  }
+  .app-logo {
+    width: 180px;
+    height: auto;
+    margin: 0 auto;
+    border-bottom-left-radius: 4rem;
+  }
+  .hamburger {
+    display: block;
+  }
+  .nav-bar {
+    display: none;
+  }
+  /* Zona telefon fixă */
+  .zona-tel {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .top-tel img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+  }
+
+  .numar-tel {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .bottom-tel {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    padding-right: 0;
+  }
+
+  /* Main photo */
+
+  /* Cards list */
+  .cards-list-wrapper {
+    width: 95%;
+  }
+
+  .card {
+    min-width: 200px;
+    max-width: 200px;
+    height: 400px;
+  }
+
+  .card-img {
+    height: 150px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    top: 20%;
+  }
+
+  .card-desc,
+  .card-city {
+    font-size: 0.8rem;
+  }
+
+  .arrow {
+    font-size: 32px;
+  }
+
+  .vezi-toate {
+    font-size: 12px;
+  }
+
+  .select-zona-ro,
+  .select-zona-str {
+    max-width: 450px;
+    min-width: 250px;
+    height: 120px;
+  }
+
+  /* Locatie grid */
+  .locatie {
+    margin-top: 20rem;
+  }
+  .locatie-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #map {
+    grid-row: auto;
+    grid-column: auto;
+    height: 300px;
+  }
+
+  .grid-item {
+    width: 80%;
+  }
+
+  .grid-item-poza4 {
+    width: 150px;
+    height: 150px;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+  }
+  .locatie-title {
+    display: flex;
+    justify-content: center;
+  }
+  /* Resources */
+  .resources-container {
+    grid-template-columns: 1fr;
+  }
+  .footer {
+    padding-bottom: 4rem;
+  }
+  .card-v-img-main img {
+    width: 100%;
+    max-width: 400px;
+    min-width: 180px;
+    height: auto;
+  }
+  .card-v-img-main {
+    max-width: 410px;
+    min-width: 190px;
+    height: 200px; /* allow height to adjust automatically */
+  }
+  .zona {
+    font-size: 1.2rem;
+  }
+  .header-card_v {
+    font-size: 1rem;
+  }
+  .data-price {
+    font-size: 1rem;
+  }
+
+  .map-container {
+    width: 180px;
+    max-width: 200px;
+    min-width: 120px;
+  }
+  .card-v-img-sec img {
+    width: 180px;
+    max-width: 200px;
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 589px) {
+  .zona-tel {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bottom-tel {
+    width: auto;
+  }
+  .cards-list {
+    gap: 0;
+  }
+  .card {
+    min-width: 150px;
+  }
+  .card-body {
+    padding: 0;
+  }
+  .map-container {
+    width: 150px;
+    max-width: 200px;
+    min-width: 120px;
+    height: 100px;
+  }
+  .card-v-img-sec img {
+    width: 150px;
+    max-width: 200px;
+    min-width: 120px;
+    height: 100px;
+  }
+
+  .first-col-detalii {
+    margin-top: 0;
+    gap: 1.8rem;
+  }
+  .header-card_v {
+    margin-bottom: 0.8rem;
+    gap: 0;
+  }
+}

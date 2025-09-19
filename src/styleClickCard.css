@@ -1,0 +1,286 @@
+/*Unele au fost stabilite din nou in responsive, deci overwrite... */
+
+.card-vizualizare {
+  width: 80%;
+  height: auto;
+  display: flex;
+  gap: 2px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: space-between;
+  margin-bottom: 20rem;
+  margin-top: 6rem;
+}
+
+.header-card_v {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.zona {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.body-card_v {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr; /* prima coloană mai mare, restul normale */
+
+  gap: 1rem; /* spațiere între elemente */
+
+  width: 100%;
+
+  grid-template-areas:
+    "main detalii"
+    "main  detalii"
+    ".    .  ";
+}
+
+.nr-tel {
+  margin-top: 1rem;
+}
+
+.footer-card_v {
+}
+
+.card-v-img-main img {
+  width: 620px;
+  height: 400px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); /* Adaugă umbra */
+  object-fit: cover;
+}
+
+.card-v-img-main {
+  height: 400px;
+  grid-area: main;
+}
+
+.card-v-img-sec {
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  grid-area: img;
+}
+
+.card-v-img-sec img {
+  width: 320px;
+  height: 180px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); /* Adaugă umbra */
+  object-fit: cover;
+}
+
+.data-price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 1.2rem;
+  gap: 1rem;
+}
+
+.first-col-detalii {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 1.2rem;
+  grid-area: detalii;
+}
+
+.nr-tel-email {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+
+.main-photo-cardPage {
+  width: 100%;
+  height: 35vh; /* înălțimea zonei imaginii, ajustează cât vrei */
+  position: relative;
+
+  opacity: 0.7;
+}
+
+.main-photo-cardPage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* fade spre alb */
+.main-photo-cardPage::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px; /* cât să ocupe fade-ul */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+.main-card-vizualizare-page {
+  margin-top: 0;
+}
+
+.descriere_footer {
+  margin-top: 10rem;
+}
+
+.details {
+  font-size: 1.6rem;
+}
+
+.text-details {
+  padding-top: 2rem;
+  font-size: 1.2rem;
+  width: 58%;
+  line-height: 1.4;
+}
+
+.servici_footer {
+  margin-top: 4rem;
+}
+
+.details {
+  font-size: 1.6rem;
+}
+
+.text-details_footer {
+  padding-top: 2rem;
+  padding-left: 1.4rem;
+  font-size: 1.2rem;
+  width: 58%;
+  line-height: 2;
+}
+
+.more-photos-container {
+  position: relative;
+  display: inline-block;
+}
+
+.more-photos-container img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.more-photos-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox.hidden {
+  display: none;
+}
+
+.lightbox-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 90%;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.lightbox-content img {
+  max-width: 850px;
+
+  border-radius: 6px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.map-container {
+  position: relative;
+  width: 65%;
+  height: 180px;
+  width: 300px;
+  background: url("./resurse/google_maps.jpg");
+  background-size: cover;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); /* Adaugă umbra */
+  margin-bottom: 0.3rem;
+}
+
+.map-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 24px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.map-button:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.locatie-title-gps-card {
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding-bottom: 1rem;
+}
+
+.more-photos-text {
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding-bottom: 1rem;
+  display: none;
+}
+
+.body-card_v.mai-multe-img {
+  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-areas:
+    "main img detalii"
+    "main img  detalii"
+    ".    .  ."
+    ".    .  .";
+}

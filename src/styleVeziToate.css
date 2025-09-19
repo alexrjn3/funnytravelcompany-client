@@ -1,0 +1,83 @@
+/* click Afiseaza toate carduri pagina */
+
+.carduri-vizualizare {
+  width: 80%;
+  height: auto;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20rem;
+  margin-top: 12rem;
+}
+
+.carduri_v {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  gap: 14rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 10rem;
+}
+
+.carduri_v img {
+  width: 700px;
+  height: 300px;
+  object-fit: cover;
+
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); /* Adaugă umbra */
+}
+
+.right-carduri-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding-top: 1rem;
+}
+
+.top-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.locatie-tara-carduri {
+  font-size: 1.6rem;
+}
+
+.tip_oferta-carduri {
+  margin-top: 1.2rem;
+}
+
+.pret-carduri {
+  margin-top: 1.2rem;
+}
+
+.bottom-info {
+  margin: auto 0;
+}
+
+.detalii-btn {
+  background-color: #fabb0e; /* verde modern */
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.detalii-btn:hover {
+  background-color: #795b08; /* verde mai închis la hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
