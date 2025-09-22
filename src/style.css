@@ -377,7 +377,7 @@ body {
   align-items: center;
   background-color: rgba(104, 104, 104, 0.2);
   flex: 0 0 8%; /* fixed ~15% height */
-  padding: 0 1rem;
+  padding: 1rem 1rem;
 }
 
 .new-badge {
@@ -475,7 +475,6 @@ body {
 }
 
 .card p {
-  padding: 0.5rem 1rem;
   color: black;
 }
 
