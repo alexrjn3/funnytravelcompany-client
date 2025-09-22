@@ -371,11 +371,12 @@
   .card {
     min-width: 200px;
     max-width: 200px;
-    height: 400px;
+    height: 600px;
+    font-size: 1rem;
   }
 
   .card-img {
-    height: 150px;
+    height: 200px;
   }
 
   .card-title {
@@ -474,7 +475,7 @@
     min-width: 150px;
   }
   .card-content {
-    height: 63%;
+    height: 68%;
   }
 }
 
