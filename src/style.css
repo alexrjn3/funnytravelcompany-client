@@ -308,7 +308,7 @@ body {
 
 .cards-list-wrapper {
   position: relative;
-  width: 67%;
+  width: 80%;
   overflow: hidden;
   margin-top: 4rem;
 }
@@ -532,10 +532,8 @@ body {
 
 .locatie-title {
   font-size: 1.8rem;
-  font-weight: 900;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  color: #fabb0e;
+  font-weight: 600;
+  color: black;
   letter-spacing: 0.3rem;
   margin-bottom: 4rem;
   cursor: default;
