@@ -123,7 +123,7 @@ function setupEventListeners() {
 
     const cards_wrapper = document.querySelector(".cards-list-wrapper");
     const width_card_wrapper =
-      Math.floor(cards_wrapper.getBoundingClientRect().width) - 50;
+      Math.floor(cards_wrapper.getBoundingClientRect().width) - 70;
 
     const translateX = parseFloat(
       getComputedStyle(cards_list).transform.split(", ")[4]
@@ -133,7 +133,7 @@ function setupEventListeners() {
       width_card * (card_listLength - 1) + 48 * (card_listLength - 1); //280 width card, 48 gap
     // dintre card(sunt mai mici cu 1 decat card in total(stanga nu are gap))
 
-    if (translateX > -conditie_max_arrowRight)
+    if (translateX > -conditie_max_arrowRight - 70)
       //tre luat cate card-uri avem
       cards_list.style.transform = `translateX(${
         translateX - width_card_wrapper
