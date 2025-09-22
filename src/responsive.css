@@ -306,7 +306,7 @@
     align-self: center;
   }
   .cards-list-wrapper {
-    width: 32%;
+    width: 100%;
   }
 }
 
@@ -517,6 +517,6 @@
     gap: 0;
   }
   .cards-list-wrapper {
-    width: 55%;
+    width: 90%;
   }
 }

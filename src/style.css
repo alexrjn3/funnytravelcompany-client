@@ -163,6 +163,7 @@ body {
 .nav-bar {
   background-color: transparent;
   padding: 1rem 1rem;
+  padding-top: 2rem;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   color: #fabb0e;
@@ -297,11 +298,12 @@ body {
 }
 
 .card-list-title {
+  text-align: center;
   font-size: 1.8rem;
   font-weight: 600;
   color: black;
   letter-spacing: 0.3rem;
-  padding-left: 2.2rem;
+
   cursor: default;
   text-transform: uppercase;
 }
@@ -569,7 +571,6 @@ body {
 }
 
 .grid-item:not(.leaflet-container) {
-  border: 1px solid gray;
 }
 
 .grid-item-poza4 {
@@ -717,12 +718,11 @@ body {
 /* Leaflet */
 
 #map {
-  border: 1px solid grey;
 }
 
 .button-googleMaps {
   padding: 1.2rem 2rem;
-  border: 1px solid black;
+  border: 1px solid gray;
   cursor: pointer !important;
   z-index: 9999; /* ca să fie sigur că stă deasupra */
   background-color: white;
