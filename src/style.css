@@ -313,6 +313,8 @@ body {
   width: 80%;
   overflow: hidden;
   margin-top: 4rem;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 .cards-list {
