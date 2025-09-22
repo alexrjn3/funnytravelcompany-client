@@ -465,6 +465,7 @@ body {
 .price {
   font-weight: 600;
   color: white;
+  text-align: center;
 }
 
 .card-header .zile {
