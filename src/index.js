@@ -115,17 +115,30 @@ function setupEventListeners() {
     if (isRightArrowLocked) return; // ignore if locked
     isRightArrowLocked = true;
     //cod:
+    card_listLength = cards_list.children.length;
+
     const card = document.querySelector(".card");
-    const cardStyle = getComputedStyle(card);
-    const gap = parseInt(cardStyle.marginRight || 48); // fallback to 48 if not set
-    const width_card = card.offsetWidth + gap;
 
-    const translateX =
-      parseFloat(getComputedStyle(cards_list).transform.split(",")[4]) || 0;
+    const width_card = Math.floor(card.getBoundingClientRect().width);
 
-    if (translateX > -(width_card * (card_listLength - 1))) {
-      cards_list.style.transform = `translateX(${translateX - width_card}px)`;
-    }
+    const cards_wrapper = document.querySelector(".cards-list-wrapper");
+    const width_card_wrapper =
+      Math.floor(cards_wrapper.getBoundingClientRect().width) - width_card;
+
+    const translateX = parseFloat(
+      getComputedStyle(cards_list).transform.split(", ")[4]
+    );
+
+    const conditie_max_arrowRight =
+      width_card * (card_listLength - 1) + 48 * (card_listLength - 1); //280 width card, 48 gap
+    // dintre card(sunt mai mici cu 1 decat card in total(stanga nu are gap))
+
+    if (translateX > -conditie_max_arrowRight)
+      //tre luat cate card-uri avem
+      cards_list.style.transform = `translateX(${
+        translateX - width_card_wrapper
+      }px)`; //1300=width pentru a sari peste 4 carduri
+
     //debounce:
     setTimeout(() => {
       isRightArrowLocked = false;
