@@ -39,8 +39,8 @@
 .hamburger {
   display: none;
   position: absolute;
-  top: 2.8rem;
-  right: 1.5rem;
+  top: 1.8rem;
+  right: 1.2rem;
   font-size: 2rem;
   background: none;
   cursor: pointer;
@@ -517,6 +517,6 @@
     gap: 0;
   }
   .cards-list-wrapper {
-    width: 40%;
+    width: 55%;
   }
 }
