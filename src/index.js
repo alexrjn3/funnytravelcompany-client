@@ -123,7 +123,7 @@ function setupEventListeners() {
 
     const cards_wrapper = document.querySelector(".cards-list-wrapper");
     const width_card_wrapper =
-      Math.floor(cards_wrapper.getBoundingClientRect().width) - width_card;
+      Math.floor(cards_wrapper.getBoundingClientRect().width) - 50;
 
     const translateX = parseFloat(
       getComputedStyle(cards_list).transform.split(", ")[4]
