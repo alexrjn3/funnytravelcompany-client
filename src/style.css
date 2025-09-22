@@ -399,6 +399,7 @@ body {
   justify-content: space-between;
   font-size: 1.2rem;
   color: #555;
+  width: 70%;
 }
 
 .card-title {
@@ -468,6 +469,7 @@ body {
 
 .card-header .zile {
   color: #555;
+  width: 30%;
 }
 
 .card:hover {
